@@ -12,6 +12,9 @@ export class User {
     @PrimaryGeneratedColumn()
     id: number;
 
+    @Column()
+    name: string;
+
     @Column({ unique: true })
     email: string;
 
@@ -26,4 +29,7 @@ export class User {
 
     @Column({ nullable: true })
     otp: string;
+
+    @Column({ nullable: true})
+    otpExpiration: Date;
 }
